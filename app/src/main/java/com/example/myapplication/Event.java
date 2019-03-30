@@ -37,11 +37,10 @@ public class Event {
 
     @Override
     public String toString() {
-        return "Event{" +
+        return
                 "eventName='" + eventName + '\'' +
-                ", eventLocation='" + eventLocation + '\'' +
-                ", comeBy='" + comeBy + '\'' +
-                '}';
+                        ", eventLocation='" + eventLocation + '\'' +
+                        ", comeBy='" + comeBy;
     }
 }
 

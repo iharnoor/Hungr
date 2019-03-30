@@ -23,12 +23,9 @@ public class EventsActivity extends AppCompatActivity implements MyRecyclerViewA
         setTitle("Events Now");
 
         // data to populate the RecyclerView with
-        ArrayList<String> animalNames = new ArrayList<>();
-        animalNames.add("Horse");
-        animalNames.add("Cow");
-        animalNames.add("Camel");
-        animalNames.add("Sheep");
-        animalNames.add("Goat");
+        ArrayList<Event> animalNames = new ArrayList<>();
+        animalNames.add(new Event("HackGSU", "Aderhold", "10am"));
+        animalNames.add(new Event("ACM Event", "SCE 217", "2pm"));
 
         // set up the RecyclerView
         RecyclerView recyclerView = findViewById(R.id.rvAnimals);
@@ -38,6 +35,7 @@ public class EventsActivity extends AppCompatActivity implements MyRecyclerViewA
         recyclerView.setAdapter(adapter);
 
         Button btnShare = findViewById(R.id.btnShare);
+
         btnShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +46,7 @@ public class EventsActivity extends AppCompatActivity implements MyRecyclerViewA
 
     @Override
     public void onItemClick(View view, int position) {
+        startActivity(new Intent(getApplicationContext(), EventInfoActivity.class));
         Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
     }
 }

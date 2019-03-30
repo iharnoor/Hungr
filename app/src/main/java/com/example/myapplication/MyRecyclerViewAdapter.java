@@ -11,12 +11,12 @@ import java.util.List;
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
 
-    private List<String> mData;
+    private List<Event> mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
     // data is passed into the constructor
-    MyRecyclerViewAdapter(Context context, List<String> data) {
+    MyRecyclerViewAdapter(Context context, List<Event> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
@@ -31,8 +31,11 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        String animal = mData.get(position);
-        holder.myTextView.setText(animal);
+        String eventName = mData.get(position).getEventName();
+        String eventPlace = mData.get(position).getEventLocation();
+        String comeBy = mData.get(position).getComeBy();
+        holder.tvEventName.setText(eventName + " @ " + eventPlace);
+        holder.tvComeBy.setText(comeBy);
     }
 
     // total number of rows
@@ -43,12 +46,30 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView myTextView;
+        TextView tvEventName;
+        TextView tvComeBy;
 
         ViewHolder(View itemView) {
             super(itemView);
-            myTextView = itemView.findViewById(R.id.tvAnimalName);
+            tvEventName = itemView.findViewById(R.id.tvEventName);
+            tvComeBy = itemView.findViewById(R.id.tvComeBy);
             itemView.setOnClickListener(this);
+        }
+
+        public TextView getTvEventName() {
+            return tvEventName;
+        }
+
+        public void setTvEventName(TextView tvEventName) {
+            this.tvEventName = tvEventName;
+        }
+
+        public TextView getTvComeBy() {
+            return tvComeBy;
+        }
+
+        public void setTvComeBy(TextView tvComeBy) {
+            this.tvComeBy = tvComeBy;
         }
 
         @Override
@@ -59,7 +80,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     // convenience method for getting data at click position
     String getItem(int id) {
-        return mData.get(id);
+        return mData.get(id).toString();
     }
 
     // allows clicks events to be caught

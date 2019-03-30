@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EventInfoActivity"></activity>
+        <activity android:name=".ShareActivity"></activity>
+        <activity android:name=".EventInfoActivity" />
         <activity android:name=".EventsActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>

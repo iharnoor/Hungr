@@ -1,105 +1,52 @@
-<?xml version = "1.0" encoding = "utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textview"
+    <Button
+        android:id="@+id/st_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="Login"
-        android:textSize="35dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textview"
-        android:layout_centerHorizontal="true"
-        android:text="Tutorials point"
-        android:textColor="#ff7aff24"
-        android:textSize="35dp" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="46dp"
-        android:focusable="true"
-        android:hint="Enter Name"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_alignEnd="@+id/editText"
-        android:layout_alignRight="@+id/editText"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColorHint="#ffff299f" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:text="Attempts Left:"
-        android:textSize="25dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_toEndOf="@+id/textview"
-        android:layout_toRightOf="@+id/textview"
-        android:text="New Text"
-        android:textSize="25dp" />
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="126dp"
+        android:text="Are you a student"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/fac_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/textview"
-        android:layout_toLeftOf="@+id/textview"
-        android:text="login" />
+        android:layout_marginStart="127dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="175dp"
+        android:onClick="sendMessage"
+        android:text="Are you a faculty"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/or_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/textview"
-        android:layout_toRightOf="@+id/textview"
-        android:text="Cancel" />
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="49dp"
+        android:fontFamily="sans-serif"
+        android:text="Or"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/fac_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/st_button" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

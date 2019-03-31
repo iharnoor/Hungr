@@ -96,13 +96,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Veg"
+            android:text="Food Type: "
             android:textSize="30dp" />
 
-        <RadioButton
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Non Veg"
+            android:text="Veg"
             android:textSize="30dp" />
     </LinearLayout>
 

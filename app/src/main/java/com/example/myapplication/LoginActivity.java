@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -24,16 +25,22 @@ public class LoginActivity extends Activity {
     private DatabaseReference mDatabase;
 //    mDatabase = FirebaseDatabase.getInstance().getReference();
 
+    DatabaseReference myRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        FirebaseApp.initializeApp(this);
+
+        myRef = FirebaseDatabase.getInstance().getReference("events");
+
         b1 = findViewById(R.id.button);
         ed1 = findViewById(R.id.editText);
         ed2 = findViewById(R.id.editText2);
 
-        b2 = findViewById(R.id.button2);
+        b2 = findViewById(R.id.push);
         tx1 = findViewById(R.id.textView3);
         tx1.setVisibility(View.GONE);
 
@@ -63,8 +70,13 @@ public class LoginActivity extends Activity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+//                myRef.push().getKey();
+// Write a message to the database
+                myRef.child("1").setValue("Singh");
+
             }
         });
+
+
     }
 }

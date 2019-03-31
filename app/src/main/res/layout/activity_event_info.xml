@@ -84,11 +84,33 @@
             android:textSize="30dp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Veg"
+            android:textSize="30dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non Veg"
+            android:textSize="30dp" />
+    </LinearLayout>
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ll3"
+        android:layout_below="@id/ll4"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="I'm Coming" />

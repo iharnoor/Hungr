@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,12 +23,11 @@ public class LoginActivity extends Activity {
     int counter = 3;
     private DatabaseReference mDatabase;
 //    mDatabase = FirebaseDatabase.getInstance().getReference();
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
 
         b1 = findViewById(R.id.button);
         ed1 = findViewById(R.id.editText);

@@ -6,11 +6,11 @@
     tools:context=".EventsActivity">
 
     <LinearLayout
-        android:layout_marginTop="150dp"
         android:id="@+id/ll1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
         android:orientation="horizontal"
         android:weightSum="2">
 
@@ -22,30 +22,30 @@
             android:textSize="30dp" />
 
         <EditText
-            android:id="@+id/searchbox"
+            android:id="@+id/etEventName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:lines="1"
-            android:scrollHorizontally="true"
-            android:ellipsize="end"
-            android:layout_weight="1"
             android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:width="200dp"
             android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:lines="1"
             android:paddingLeft="15dp"
+            android:scrollHorizontally="true"
             android:textAlignment="viewStart"
-            android:textSize="30dp"
-            android:width="200dp"/>
+            android:textSize="30dp" />
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_marginTop="10dp"
-
         android:id="@+id/ll2"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ll1"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:weightSum="2">
 
@@ -57,28 +57,28 @@
             android:textSize="30dp" />
 
         <EditText
-            android:id="@+id/searchbox"
+            android:id="@+id/etEventLocation"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:lines="1"
-            android:scrollHorizontally="true"
-            android:ellipsize="end"
-            android:layout_weight="1"
             android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:width="200dp"
             android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:lines="1"
             android:paddingLeft="15dp"
+            android:scrollHorizontally="true"
             android:textAlignment="viewStart"
-            android:textSize="30dp"
-            android:width="200dp"/>
+            android:textSize="30dp" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="10dp"
         android:id="@+id/ll3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ll2"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:weightSum="2">
 
@@ -90,29 +90,51 @@
             android:textSize="30dp" />
 
         <EditText
-            android:id="@+id/searchbox"
+            android:id="@+id/etComeBy"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:lines="1"
-            android:scrollHorizontally="true"
-            android:ellipsize="end"
-            android:layout_weight="1"
             android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:width="200dp"
             android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:lines="1"
             android:paddingLeft="15dp"
+            android:scrollHorizontally="true"
             android:textAlignment="viewStart"
-            android:textSize="30dp"
-            android:width="200dp"/>
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Veg"
+            android:textSize="30dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non Veg"
+            android:textSize="30dp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Publish"
+        android:layout_below="@+id/ll4"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:layout_below="@+id/ll3"/>
+        android:text="Publish" />
 
 
 </RelativeLayout>

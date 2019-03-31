@@ -36,7 +36,7 @@
         android:focusable="true"
         android:hint="Enter Name"
         android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6" />
+        android:textColorHint="#2196F3" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -58,7 +58,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColorHint="#ffff299f" />
+        android:textColorHint="#03A9F4" />
 
     <TextView
         android:id="@+id/textView2"

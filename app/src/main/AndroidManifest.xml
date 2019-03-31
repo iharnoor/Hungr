@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShareActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".ShareActivity" />
         <activity android:name=".EventInfoActivity" />
         <activity android:name=".EventsActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".SpashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

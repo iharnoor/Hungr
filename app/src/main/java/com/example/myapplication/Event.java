@@ -3,20 +3,20 @@ package com.example.myapplication;
 public class Event {
     private String eventName;
     private String eventLocation;
-    private String comeBy;
+    private String eventTime;
 
-    public Event(String eventName, String eventLocation, String comeBy) {
+    public Event(String eventName, String eventLocation, String eventTime) {
         this.eventName = eventName;
         this.eventLocation = eventLocation;
-        this.comeBy = comeBy;
+        this.eventTime = eventTime;
     }
 
-    public String getComeBy() {
-        return comeBy;
+    public String getEventTime() {
+        return eventTime;
     }
 
-    public void setComeBy(String comeBy) {
-        this.comeBy = comeBy;
+    public void setEventTime(String eventTime) {
+        this.eventTime = eventTime;
     }
 
     public String getEventName() {
@@ -40,7 +40,7 @@ public class Event {
         return
                 "eventName='" + eventName + '\'' +
                         ", eventLocation='" + eventLocation + '\'' +
-                        ", comeBy='" + comeBy;
+                        ", eventTime='" + eventTime;
     }
 }
 

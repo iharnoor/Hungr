@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,8 +12,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 
 public class LoginActivity extends Activity {
@@ -26,6 +31,7 @@ public class LoginActivity extends Activity {
 //    mDatabase = FirebaseDatabase.getInstance().getReference();
 
     DatabaseReference myRef;
+    ArrayList<String> userlist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,36 +53,59 @@ public class LoginActivity extends Activity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ed1.getText().toString().equals("123") &&
-                        ed2.getText().toString().equals("123")) {
-                    Toast.makeText(getApplicationContext(),
-                            "Redirecting...", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), EventsActivity.class));
-                } else {
-                    Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
-
-                    tx1.setVisibility(View.VISIBLE);
-                    tx1.setBackgroundColor(Color.RED);
-                    counter--;
-                    tx1.setText(Integer.toString(counter));
-
-                    if (counter == 0) {
-                        b1.setEnabled(false);
-                    }
-                }
+//                if (ed1.getText().toString().equals("123") &&
+//                        ed2.getText().toString().equals("123")) {
+                Toast.makeText(getApplicationContext(),
+                        "Redirecting...", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), EventsActivity.class));
+//                } else {
+//                    Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
+//
+//                    tx1.setVisibility(View.VISIBLE);
+//                    tx1.setBackgroundColor(Color.RED);
+//                    counter--;
+//                    tx1.setText(Integer.toString(counter));
+//
+//                    if (counter == 0) {
+//                        b1.setEnabled(false);
+//                    }
+//                }
             }
+        });
+
+        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                userlist = new ArrayList<String>();
+                // Result will be holded Here
+                for (DataSnapshot dsp : dataSnapshot.getChildren()) {
+                    userlist.add(String.valueOf(dsp.getValue())); //add result into array list
+                }
+//                Toast.makeText(LoginActivity.this, "updated", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(LoginActivity.this, "error", Toast.LENGTH_SHORT).show();
+            }
+
         });
 
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                myRef.push().getKey();
-// Write a message to the database
-                myRef.child("1").setValue("Singh");
+//                String x = myRef.child("events").toString();
 
+                Toast.makeText(LoginActivity.this, userlist.toString(), Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
+
+    public void pushToDb(String data) {
+        // read the largest key and
+        // key++
+        myRef.child("2").setValue("Yasir");
+    }
+
 }

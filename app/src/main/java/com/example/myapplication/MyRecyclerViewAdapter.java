@@ -33,7 +33,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     public void onBindViewHolder(ViewHolder holder, int position) {
         String eventName = mData.get(position).getEventName();
         String eventPlace = mData.get(position).getEventLocation();
-        String comeBy = mData.get(position).getComeBy();
+        String comeBy = mData.get(position).getEventTime();
         holder.tvEventName.setText(eventName + " @ " + eventPlace);
         holder.tvComeBy.setText(comeBy);
     }

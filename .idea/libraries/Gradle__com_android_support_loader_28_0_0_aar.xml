@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:loader:28.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/8796c6e61b622a8ec303ab0bc1dac6ac/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/8796c6e61b622a8ec303ab0bc1dac6ac/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/47ddd6381cad0b6a3f2ff407e2458694/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/47ddd6381cad0b6a3f2ff407e2458694/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

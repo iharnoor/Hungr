@@ -20,7 +20,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textview"
         android:layout_centerHorizontal="true"
-        android:text="Tutorials point"
         android:textColor="#ff7aff24"
         android:textSize="35dp" />
 
